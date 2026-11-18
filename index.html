@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leftclickceo — Custom AI Agents for Business Operations</title>
+  <meta name="description" content="Leftclickceo designs, builds and runs bespoke autonomous AI agents inside the tools you already use. Fixed price, about four weeks, human-in-the-loop guardrails." />
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body class="site-body">
+
+  <!-- ========================================================
+       TOP ANNOUNCEMENT BAR
+       ======================================================== -->
+  <div class="top-banner" id="top-banner">
+    <div class="top-banner-content">
+      <span>New: the 60-second fit test tells you if your workflow is worth an agent.</span>
+      <button class="top-banner-link open-fit-modal-btn">Take it &rarr;</button>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       STICKY NAVBAR
+       ======================================================== -->
+  <header class="site-header" id="header">
+    <div class="header-container">
+      <a href="#" class="brand-logo" aria-label="Leftclickceo Home">
+        <span class="logo-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+            <rect width="24" height="24" rx="6" fill="#111111" />
+            <circle cx="12" cy="12" r="5" fill="#ea3829" />
+            <circle cx="12" cy="12" r="2.2" fill="#ffffff" />
+          </svg>
+        </span>
+        <span class="logo-text">Leftclickceo</span>
+      </a>
+
+      <nav class="nav-links">
+        <button class="nav-link fit-test-pill open-fit-modal-btn">
+          <span class="green-dot"></span>
+          <span>60-second fit test</span>
+        </button>
+        <a href="#agents" class="nav-link">Agents</a>
+        <a href="#process" class="nav-link">Process</a>
+        <a href="#pricing" class="nav-link">Pricing</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="btn-dark-pill open-fit-modal-btn">Book a call</button>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Menu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Drawer -->
+  <div class="mobile-drawer" id="mobile-drawer">
+    <button class="mobile-link fit-test-mobile open-fit-modal-btn">
+      <span class="green-dot"></span> 60-second fit test
+    </button>
+    <a href="#agents" class="mobile-link">Agents</a>
+    <a href="#process" class="mobile-link">Process</a>
+    <a href="#pricing" class="mobile-link">Pricing</a>
+    <a href="#faq" class="mobile-link">FAQ</a>
+    <button class="btn-dark-pill w-full mt-4 open-fit-modal-btn">Book a call</button>
+  </div>
+
+  <main>
+    <!-- ========================================================
+         HERO SECTION
+         ======================================================== -->
+    <section class="hero-section" id="hero">
+      <div class="dot-grid-bg" aria-hidden="true"></div>
+
+      <!-- Floating Badges in Hero -->
+      <div class="floating-badge badge-top-left" id="badge-top-left">
+        <span class="badge-check">&check;</span>
+        <div class="badge-text-group">
+          <span class="badge-title">Lead enriched</span>
+          <span class="badge-agent">SALES AGENT</span>
+        </div>
+      </div>
+
+      <div class="floating-badge badge-top-right" id="badge-top-right">
+        <span class="badge-check">&check;</span>
+        <div class="badge-text-group">
+          <span class="badge-title">Invoice matched to PO</span>
+          <span class="badge-agent">FINANCE AGENT</span>
+        </div>
+      </div>
+
+      <div class="floating-badge badge-mid-left" id="badge-mid-left">
+        <span class="badge-check">&check;</span>
+        <div class="badge-text-group">
+          <span class="badge-title">Refund ticket resolved</span>
+          <span class="badge-agent">SUPPORT AGENT</span>
+        </div>
+      </div>
+
+      <div class="floating-badge badge-bottom-right" id="badge-bottom-right">
+        <span class="badge-check">&check;</span>
+        <div class="badge-text-group">
+          <span class="badge-title">Monday report posted</span>
+          <span class="badge-agent">OPS AGENT</span>
+        </div>
+      </div>
+
+      <div class="hero-container">
+        <!-- Section Tag -->
+        <div class="section-tag-pill">
+          <span class="red-sq"></span>
+          <span>AI AGENT AGENCY</span>
+        </div>
+
+        <!-- Giant Rotating Headline -->
+        <h1 class="hero-title">
+          Custom AI agents<br />
+          <span class="hero-title-sub">that run your <span class="rotating-word" id="rotating-word">operations</span> work.</span>
+        </h1>
+
+        <!-- Subtitle -->
+        <p class="hero-subtitle">
+          Leftclickceo designs, builds and runs agents inside the tools you already use.
+          Fixed price, about four weeks, and a person approves anything that matters.
+        </p>
+
+        <!-- Interactive Agent Sketcher Box -->
+        <div class="sketch-input-card" id="sketch-card">
+          <div class="sketch-input-wrapper">
+            <input
+              type="text"
+              id="hero-sketch-input"
+              class="hero-sketch-input"
+              value="a content creator agent"
+              placeholder="e.g. match invoices to purchase orders, qualify inbound leads..."
+            />
+          </div>
+          <div class="sketch-card-footer">
+            <span class="sketch-label-sub">GET A ROUGH AGENT SKETCH</span>
+            <button class="btn-red-pill" id="hero-sketch-btn">
+              <span>Sketch my agent</span>
+              <span class="arrow">&rarr;</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Quick Pills Below Input -->
+        <div class="quick-pills-row">
+          <button class="pill-chip" data-workflow="reply-lead">Reply to every new lead within a minute</button>
+          <button class="pill-chip" data-workflow="resolve-ticket">Resolve refund and order-status tickets</button>
+          <button class="pill-chip" data-workflow="match-invoices">Match invoices to purchase orders</button>
+          <button class="pill-chip" data-workflow="monday-slack">Send the Monday numbers to Slack</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         METRICS / GUARANTEE 4-COL BAR
+         ======================================================== -->
+    <section class="metrics-bar-section">
+      <div class="metrics-container">
+        <div class="metric-item">
+          <span class="metric-label">SCOPE</span>
+          <span class="metric-value">One workflow per build</span>
+        </div>
+        <div class="metric-item">
+          <span class="metric-label">TIMELINE</span>
+          <span class="metric-value">About four weeks</span>
+        </div>
+        <div class="metric-item">
+          <span class="metric-label">PRICE</span>
+          <span class="metric-value">Fixed, agreed upfront</span>
+        </div>
+        <div class="metric-item">
+          <span class="metric-label">OWNERSHIP</span>
+          <span class="metric-value">Code and prompts are yours</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         DARK TICKER TAPE / MARQUEE
+         ======================================================== -->
+    <section class="marquee-section" aria-hidden="true">
+      <div class="marquee-track">
+        <div class="marquee-content">
+          <span>LEAD RESPONDER</span><span class="red-diamond">&diams;</span>
+          <span>TICKET RESOLVER</span><span class="red-diamond">&diams;</span>
+          <span>INVOICE PROCESSOR</span><span class="red-diamond">&diams;</span>
+          <span>REPORTING AGENT</span><span class="red-diamond">&diams;</span>
+          <span>MEETING PREPPER</span><span class="red-diamond">&diams;</span>
+          <span>FRONT DESK AGENT</span><span class="red-diamond">&diams;</span>
+          <span>DISPUTE HANDLER</span><span class="red-diamond">&diams;</span>
+          <span>EXPENSE AUDITOR</span><span class="red-diamond">&diams;</span>
+          <span>ONBOARDING CONCIERGE</span><span class="red-diamond">&diams;</span>
+          <span>LEAD RESPONDER</span><span class="red-diamond">&diams;</span>
+          <span>TICKET RESOLVER</span><span class="red-diamond">&diams;</span>
+          <span>INVOICE PROCESSOR</span><span class="red-diamond">&diams;</span>
+          <span>REPORTING AGENT</span><span class="red-diamond">&diams;</span>
+          <span>MEETING PREPPER</span><span class="red-diamond">&diams;</span>
+          <span>FRONT DESK AGENT</span><span class="red-diamond">&diams;</span>
+          <span>DISPUTE HANDLER</span><span class="red-diamond">&diams;</span>
+          <span>EXPENSE AUDITOR</span><span class="red-diamond">&diams;</span>
+          <span>ONBOARDING CONCIERGE</span><span class="red-diamond">&diams;</span>
+        </div>
+        <div class="marquee-content" aria-hidden="true">
+          <span>LEAD RESPONDER</span><span class="red-diamond">&diams;</span>
+          <span>TICKET RESOLVER</span><span class="red-diamond">&diams;</span>
+          <span>INVOICE PROCESSOR</span><span class="red-diamond">&diams;</span>
+          <span>REPORTING AGENT</span><span class="red-diamond">&diams;</span>
+          <span>MEETING PREPPER</span><span class="red-diamond">&diams;</span>
+          <span>FRONT DESK AGENT</span><span class="red-diamond">&diams;</span>
+          <span>DISPUTE HANDLER</span><span class="red-diamond">&diams;</span>
+          <span>EXPENSE AUDITOR</span><span class="red-diamond">&diams;</span>
+          <span>ONBOARDING CONCIERGE</span><span class="red-diamond">&diams;</span>
+          <span>LEAD RESPONDER</span><span class="red-diamond">&diams;</span>
+          <span>TICKET RESOLVER</span><span class="red-diamond">&diams;</span>
+          <span>INVOICE PROCESSOR</span><span class="red-diamond">&diams;</span>
+          <span>REPORTING AGENT</span><span class="red-diamond">&diams;</span>
+          <span>MEETING PREPPER</span><span class="red-diamond">&diams;</span>
+          <span>FRONT DESK AGENT</span><span class="red-diamond">&diams;</span>
+          <span>DISPUTE HANDLER</span><span class="red-diamond">&diams;</span>
+          <span>EXPENSE AUDITOR</span><span class="red-diamond">&diams;</span>
+          <span>ONBOARDING CONCIERGE</span><span class="red-diamond">&diams;</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         WHAT WE BUILD (Agents Directory)
+         ======================================================== -->
+    <section class="section what-we-build-section" id="agents">
+      <div class="container">
+        <div class="section-badge">
+          <span class="red-sq"></span>
+          <span>WHAT WE BUILD</span>
+        </div>
+        <h2 class="section-title">
+          One agent per job. <span class="text-muted">Each with a clear rule for when to ask a person.</span>
+        </h2>
+
+        <div class="agents-matrix-layout">
+          <!-- Left Navigation Tab List -->
+          <div class="matrix-tabs-col">
+            <button class="matrix-tab-btn active" data-cat="sales">
+              <span class="tab-num">01</span>
+              <span class="tab-label">Sales</span>
+            </button>
+            <button class="matrix-tab-btn" data-cat="support">
+              <span class="tab-num">02</span>
+              <span class="tab-label">Support</span>
+            </button>
+            <button class="matrix-tab-btn" data-cat="operations">
+              <span class="tab-num">03</span>
+              <span class="tab-label">Operations</span>
+            </button>
+            <button class="matrix-tab-btn" data-cat="finance">
+              <span class="tab-num">04</span>
+              <span class="tab-label">Finance</span>
+            </button>
+          </div>
+
+          <!-- Right Cards Display -->
+          <div class="matrix-cards-col" id="matrix-cards-container">
+            <!-- Injected via JS based on category -->
+          </div>
+        </div>
+
+        <div class="custom-workflow-callout">
+          <span>Don't see your workflow? Most of what we build is custom.</span>
+          <a href="#hero" class="underlined-link" id="focus-sketch-link">Describe it and get a sketch &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         SEE ONE WORK (Interactive Agent Runner)
+         ======================================================== -->
+    <section class="section see-one-work-section" id="see-one-work">
+      <div class="container">
+        <div class="section-badge">
+          <span class="red-sq"></span>
+          <span>SEE ONE WORK</span>
+        </div>
+        <h2 class="section-title">
+          Watch an agent finish a job. <span class="text-muted">Then hand the risky part to a person.</span>
+        </h2>
+
+        <div class="demo-split-grid">
+          <!-- Left Scenario List -->
+          <div class="scenario-selector-col">
+            <button class="scenario-card active" data-scenario="lead">
+              <div class="scenario-head">
+                <span class="scenario-title">A lead comes in at 11pm</span>
+                <span class="scenario-agent-tag">SALES AGENT</span>
+              </div>
+              <p class="scenario-desc">Enriches company size, qualifies against ICP, drafts reply, waits for rep approval.</p>
+            </button>
+
+            <button class="scenario-card" data-scenario="finance">
+              <div class="scenario-head">
+                <span class="scenario-title">Invoice arrives from new vendor</span>
+                <span class="scenario-agent-tag">FINANCE AGENT</span>
+              </div>
+              <p class="scenario-desc">Matches line items against PO ledger, detects bank discrepancy, alerts Controller.</p>
+            </button>
+
+            <button class="scenario-card" data-scenario="support">
+              <div class="scenario-head">
+                <span class="scenario-title">Customer asks for a $120 refund</span>
+                <span class="scenario-agent-tag">SUPPORT AGENT</span>
+              </div>
+              <p class="scenario-desc">Checks policy threshold, executes under-$50 auto-refund, flags $120 to supervisor.</p>
+            </button>
+          </div>
+
+          <!-- Right Interactive Terminal / Inspector -->
+          <div class="demo-terminal-wrapper">
+            <div class="terminal-header">
+              <div class="mac-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <span class="terminal-title" id="terminal-agent-title">sales-agent</span>
+              <button class="btn-replay-trace" id="replay-demo-btn">&#x21bb; Replay</button>
+            </div>
+
+            <div class="terminal-body" id="terminal-trace-body">
+              <!-- Trace lines populated dynamically -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         HOW IT WORKS (30-Day Timeline Roadmap)
+         ======================================================== -->
+    <section class="section process-section" id="process">
+      <div class="container">
+        <div class="section-badge">
+          <span class="red-sq"></span>
+          <span>HOW IT WORKS</span>
+        </div>
+        <h2 class="section-title">
+          Your first 30 days, mapped. <span class="text-muted">One workflow. One agent. Shipped.</span>
+        </h2>
+
+        <div class="timeline-row">
+          <!-- Step 1 -->
+          <div class="timeline-step">
+            <div class="step-bullet-wrapper">
+              <div class="step-indicator filled"></div>
+              <div class="step-line"></div>
+            </div>
+            <div class="step-day-badge">DAY 1</div>
+            <h3 class="step-title">Audit call</h3>
+            <p class="step-desc">We sit with the people who do the work, map the workflow and pick the one automation worth building first.</p>
+            <div class="step-pill">Shortlist of what to automate</div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="timeline-step">
+            <div class="step-bullet-wrapper">
+              <div class="step-indicator"></div>
+              <div class="step-line"></div>
+            </div>
+            <div class="step-day-badge">DAY 5</div>
+            <h3 class="step-title">Plan and fixed quote</h3>
+            <p class="step-desc">You get the technical plan, the success metric we'll be held to and one price. No hourly meter after this.</p>
+            <div class="step-pill">Plan, metric, fixed price</div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="timeline-step">
+            <div class="step-bullet-wrapper">
+              <div class="step-indicator"></div>
+              <div class="step-line"></div>
+            </div>
+            <div class="step-day-badge">DAY 8 TO 21</div>
+            <h3 class="step-title">Build, with weekly demos</h3>
+            <p class="step-desc">We build against your real data and test on past cases. You see it working every week, not at the end.</p>
+            <div class="step-pill">Weekly demo and test results</div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="timeline-step">
+            <div class="step-bullet-wrapper">
+              <div class="step-indicator"></div>
+            </div>
+            <div class="step-day-badge">DAY 28</div>
+            <h3 class="step-title">Launch, approved by you</h3>
+            <p class="step-desc">It goes live on a schedule. Your team reviews its work, and autonomy grows as trust does.</p>
+            <div class="step-pill">Live agent and team trained</div>
+          </div>
+        </div>
+
+        <p class="process-bottom-note">
+          After day 30 we keep it running on the Run plan, or hand over the code so your team can. Both are fine with us.
+        </p>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         CONTROL (High-Contrast Dark Section)
+         ======================================================== -->
+    <section class="section dark-control-section" id="control">
+      <div class="container">
+        <div class="section-badge dark-badge">
+          <span class="red-sq"></span>
+          <span>CONTROL</span>
+        </div>
+        <h2 class="section-title text-white">
+          You set the leash. <span class="text-white-dim">Per action, and you can change it any time.</span>
+        </h2>
+
+        <div class="control-split-grid">
+          <!-- Left Controls Toggle -->
+          <div class="control-modes-col">
+            <button class="mode-card" data-mode="approve" id="mode-approve-btn">
+              <span class="mode-title">Approve</span>
+              <span class="mode-sub">Routine runs, risky asks</span>
+            </button>
+            <button class="mode-card active" data-mode="autopilot" id="mode-autopilot-btn">
+              <span class="mode-title">Autopilot</span>
+              <span class="mode-sub">Acts within guardrails</span>
+            </button>
+          </div>
+
+          <!-- Right Policy Matrix Card -->
+          <div class="policy-matrix-card">
+            <div class="policy-header">
+              <span class="policy-sublabel">SUPPORT AGENT &middot; EXAMPLE POLICY</span>
+              <span class="policy-mode-label" id="policy-mode-display">AUTOPILOT</span>
+            </div>
+
+            <div class="policy-rows" id="policy-rows-container">
+              <div class="policy-row">
+                <span class="policy-action">Answer order-status questions</span>
+                <span class="policy-badge green-badge">AGENT DOES IT</span>
+              </div>
+              <div class="policy-row">
+                <span class="policy-action">Update a shipping address</span>
+                <span class="policy-badge green-badge">AGENT DOES IT</span>
+              </div>
+              <div class="policy-row">
+                <span class="policy-action">Refund under $50</span>
+                <span class="policy-badge green-badge">AGENT DOES IT</span>
+              </div>
+              <div class="policy-row">
+                <span class="policy-action">Refund over $50</span>
+                <span class="policy-badge red-badge">ASKS YOU FIRST</span>
+              </div>
+              <div class="policy-row">
+                <span class="policy-action">Close an account</span>
+                <span class="policy-badge red-badge">ASKS YOU FIRST</span>
+              </div>
+            </div>
+
+            <div class="policy-card-footer">
+              Every action is logged with the reason the agent gave. You can audit it or undo it.
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 Guarantee Pillars Row -->
+        <div class="dark-pillars-grid">
+          <div class="pillar-col">
+            <span class="pillar-num">01</span>
+            <h4 class="pillar-title">Built in your accounts</h4>
+            <p class="pillar-desc">Agents run on your own API keys and workspaces. Switch us off and the system stays.</p>
+          </div>
+          <div class="pillar-col">
+            <span class="pillar-num">02</span>
+            <h4 class="pillar-title">You own everything</h4>
+            <p class="pillar-desc">Code, prompts, test cases and docs are handed over. No lock-in to us or to one model vendor.</p>
+          </div>
+          <div class="pillar-col">
+            <span class="pillar-num">03</span>
+            <h4 class="pillar-title">Your data stays yours</h4>
+            <p class="pillar-desc">Minimum access per workflow, under NDA. We never use your data to train anything.</p>
+          </div>
+          <div class="pillar-col">
+            <span class="pillar-num">04</span>
+            <h4 class="pillar-title">Tested before trusted</h4>
+            <p class="pillar-desc">Each agent ships with a test set built from your past cases, and has to pass it first.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         YOUR OPTIONS (Comparison Matrix)
+         ======================================================== -->
+    <section class="section options-section">
+      <div class="container">
+        <div class="section-badge">
+          <span class="red-sq"></span>
+          <span>YOUR OPTIONS</span>
+        </div>
+        <h2 class="section-title">
+          Three ways to get an agent. <span class="text-muted">Only one comes with a fixed price.</span>
+        </h2>
+
+        <div class="options-table-card">
+          <div class="table-header-row">
+            <div class="th-col empty-col"></div>
+            <div class="th-col col-agentico">LEFTCLICKCEO</div>
+            <div class="th-col">HIRE IN-HOUSE</div>
+            <div class="th-col">DIY ON A PLATFORM</div>
+          </div>
+
+          <div class="table-data-row">
+            <div class="td-col label-col">Time to a first live agent</div>
+            <div class="td-col val-agentico">About four weeks</div>
+            <div class="td-col">Months: hire, then build</div>
+            <div class="td-col">Depends on your team's spare time</div>
+          </div>
+
+          <div class="table-data-row">
+            <div class="td-col label-col">Cost predictability</div>
+            <div class="td-col val-agentico">Fixed price, agreed upfront</div>
+            <div class="td-col">Salary + benefits ongoing</div>
+            <div class="td-col">Hidden cost in lost focus</div>
+          </div>
+
+          <div class="table-data-row">
+            <div class="td-col label-col">Engineering maintenance</div>
+            <div class="td-col val-agentico">Handled on Run or handed over</div>
+            <div class="td-col">Your team maintains it</div>
+            <div class="td-col">Breaks when APIs change</div>
+          </div>
+
+          <div class="table-data-row">
+            <div class="td-col label-col">Human-in-the-loop guardrails</div>
+            <div class="td-col val-agentico">Custom per-action leash built in</div>
+            <div class="td-col">Requires custom tooling</div>
+            <div class="td-col">Basic or all-or-nothing</div>
+          </div>
+
+          <div class="table-data-row">
+            <div class="td-col label-col">Code ownership</div>
+            <div class="td-col val-agentico">100% yours, zero lock-in</div>
+            <div class="td-col">Yours</div>
+            <div class="td-col">Locked inside platform</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         ROI CALCULATOR
+         ======================================================== -->
+    <section class="section roi-calculator-section" id="calculator">
+      <div class="container">
+        <h2 class="section-title">
+          What is the manual version costing you? <span class="text-muted">Use your own numbers.</span>
+        </h2>
+
+        <div class="calculator-grid">
+          <!-- Left Sliders Column -->
+          <div class="calc-sliders-col">
+            <!-- Slider 1 -->
+            <div class="slider-group">
+              <div class="slider-header">
+                <label for="slider-people" class="slider-label">People doing this task</label>
+                <span class="slider-val-display" id="val-people">15</span>
+              </div>
+              <input type="range" id="slider-people" min="1" max="50" value="15" class="custom-range" />
+            </div>
+
+            <!-- Slider 2 -->
+            <div class="slider-group">
+              <div class="slider-header">
+                <label for="slider-hours" class="slider-label">Hours per person, per week</label>
+                <span class="slider-val-display" id="val-hours">13</span>
+              </div>
+              <input type="range" id="slider-hours" min="1" max="40" value="13" class="custom-range" />
+            </div>
+
+            <!-- Slider 3 -->
+            <div class="slider-group">
+              <div class="slider-header">
+                <label for="slider-rate" class="slider-label">Loaded cost per hour</label>
+                <span class="slider-val-display" id="val-rate">$75</span>
+              </div>
+              <input type="range" id="slider-rate" min="20" max="200" step="5" value="75" class="custom-range" />
+            </div>
+
+            <!-- Slider 4 -->
+            <div class="slider-group">
+              <div class="slider-header">
+                <label for="slider-share" class="slider-label">Share an agent could handle</label>
+                <span class="slider-val-display" id="val-share">50%</span>
+              </div>
+              <input type="range" id="slider-share" min="10" max="90" step="5" value="50" class="custom-range" />
+            </div>
+          </div>
+
+          <!-- Right Results Card -->
+          <div class="calc-results-card">
+            <span class="calc-card-eyebrow">MANUAL COST PER YEAR</span>
+            <div class="calc-primary-metric" id="display-manual-cost">$760,500</div>
+
+            <div class="calc-divider"></div>
+
+            <div class="calc-stat-row">
+              <span class="calc-stat-label">Hours handed back per year</span>
+              <span class="calc-stat-val" id="display-hours-saved">5,070</span>
+            </div>
+
+            <div class="calc-stat-row">
+              <span class="calc-stat-label">Value of those hours</span>
+              <span class="calc-stat-val" id="display-value-saved">$380,250</span>
+            </div>
+
+            <div class="calc-stat-row">
+              <span class="calc-stat-label">Build plus 12 months of Run</span>
+              <span class="calc-stat-val">$24,000</span>
+            </div>
+
+            <div class="calc-divider"></div>
+
+            <div class="calc-stat-row net-row">
+              <span class="calc-stat-label font-bold">Net in year one</span>
+              <span class="calc-stat-val text-emerald" id="display-net-year-one">$356,250</span>
+            </div>
+
+            <div class="calc-disclaimer-box">
+              These are your assumptions, not our promise. On the audit call we replace them with measured numbers, and tell you if the math doesn't work.
+            </div>
+
+            <button class="btn-red-pill w-full mt-4 open-fit-modal-btn">
+              <span>Check this on a free call</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         PRICING (Fixed prices. No hourly meter.)
+         ======================================================== -->
+    <section class="section pricing-section" id="pricing">
+      <div class="container">
+        <h2 class="section-title">
+          Fixed prices. <span class="text-muted">No hourly meter.</span>
+        </h2>
+
+        <!-- Trust Badges with Red Checkmarks -->
+        <div class="pricing-trust-badges">
+          <span class="trust-item"><span class="red-check">&check;</span> SUCCESS-METRIC GUARANTEE</span>
+          <span class="trust-item"><span class="red-check">&check;</span> AUDIT FEE CREDITED TO YOUR BUILD</span>
+          <span class="trust-item"><span class="red-check">&check;</span> PAUSE OR CANCEL RUN ANYTIME</span>
+        </div>
+
+        <div class="pricing-cards-stack">
+          <!-- Tier 1: Audit -->
+          <div class="pricing-split-card">
+            <div class="card-left-tier">
+              <h3 class="tier-title">Audit</h3>
+              <p class="tier-sub">Find the first agent worth building.</p>
+              <div class="tier-price-row">
+                <span class="tier-price">$1,500</span>
+                <span class="tier-cycle">one-time</span>
+              </div>
+              <button class="btn-outline-pill open-fit-modal-btn">Start with an audit</button>
+            </div>
+            <div class="card-right-specs">
+              <div class="spec-row">
+                <span class="spec-label">SCOPE</span>
+                <span class="spec-detail">One team, up to three workflows mapped with the people who do the work.</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-label">TIMELINE</span>
+                <span class="spec-detail">About one week.</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-label">YOU GET</span>
+                <span class="spec-detail">Automations ranked by payback, a technical plan and a fixed build quote.</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-label">CREDIT</span>
+                <span class="spec-detail">100% of the audit fee applies to your build.</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-label">NO STRINGS</span>
+                <span class="spec-detail">The plan is yours to keep, even if you build elsewhere.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tier 2: Build (Featured Dark Card) -->
+          <div class="pricing-split-card dark-featured">
+            <div class="featured-red-ribbon">MOST TEAMS START HERE</div>
+            <div class="card-left-tier">
+              <h3 class="tier-title text-white">Build</h3>
+              <p class="tier-sub text-white-dim">One production agent, shipped.</p>
+              <div class="tier-price-row">
+                <span class="tier-from text-white-dim">from</span>
+                <span class="tier-price text-white">$6,000</span>
+                <span class="tier-cycle text-white-dim">per agent</span>
+              </div>
+              <button class="btn-red-pill w-full open-fit-modal-btn">Book a build call</button>
+            </div>
+            <div class="card-right-specs">
+              <div class="spec-row">
+                <span class="spec-label text-white-dim">SCOPE</span>
+                <span class="spec-detail text-white">One workflow, connected to up to four of your tools.</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-label text-white-dim">TIMELINE</span>
+                <span class="spec-detail text-white">About four weeks, with a demo every week.</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-label text-white-dim">YOU GET</span>
+                <span class="spec-detail text-white">A live agent, approval flows, a test suite from your cases, and full code handover.</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-label text-white-dim">TUNING</span>
+                <span class="spec-detail text-white">30 days of adjustments after launch, included.</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-label text-white-dim">GUARANTEE</span>
+                <span class="spec-detail text-white">If it misses the metric we agreed, we keep working at no extra cost until it passes.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tier 3: Run -->
+          <div class="pricing-split-card">
+            <div class="card-left-tier">
+              <h3 class="tier-title">Run</h3>
+              <p class="tier-sub">We keep it working and improving.</p>
+              <div class="tier-price-row">
+                <span class="tier-price">$1,500</span>
+                <span class="tier-cycle">per month</span>
+              </div>
+              <button class="btn-outline-pill open-fit-modal-btn">Talk to us</button>
+            </div>
+            <div class="card-right-specs">
+              <div class="spec-row">
+                <span class="spec-label">SCOPE</span>
+                <span class="spec-detail">Monitoring, alerts and fixes when models or APIs change.</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-label">CADENCE</span>
+                <span class="spec-detail">A performance report every month. Small change requests included.</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-label">UPGRADES</span>
+                <span class="spec-detail">Prompt and model upgrades as better options ship.</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-label">USAGE</span>
+                <span class="spec-detail">Model and API costs are billed to your own accounts. No markup.</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-label">TERMS</span>
+                <span class="spec-detail">Pause or cancel anytime.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="pricing-footer-disclaimer">
+          What's not included: replacing your core systems, cleaning years of messy data, or anything we can't test against real cases.
+        </p>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         SELECTED WORK (This wall is open)
+         ======================================================== -->
+    <section class="section selected-work-section">
+      <div class="container">
+        <div class="section-badge">
+          <span class="red-sq"></span>
+          <span>SELECTED WORK</span>
+        </div>
+        <h2 class="section-title">
+          This wall is open. <span class="text-muted">Your workflow could be the first on it.</span>
+        </h2>
+        <p class="section-lead-text">
+          We build bespoke production agents for high-trust operators in finance, logistics, e-commerce and B2B SaaS. We don't publish client logos until metrics and ROI are proven in production.
+        </p>
+
+        <div class="open-wall-grid">
+          <div class="wall-card">
+            <div class="wall-card-badge">FINANCE AGENT</div>
+            <h4 class="wall-card-title">12,000 monthly invoices reconciled against bank feed</h4>
+            <p class="wall-card-desc">Matches line items, flags unknown vendors, and drafts AP entries for Controller one-click approval.</p>
+            <div class="wall-meta">STATUS: LIVE IN PRODUCTION &middot; 99.4% AUTOMATION</div>
+          </div>
+
+          <div class="wall-card">
+            <div class="wall-card-badge">SUPPORT AGENT</div>
+            <h4 class="wall-card-title">Tier-1 e-commerce order status & return tickets</h4>
+            <p class="wall-card-desc">Resolves tracking disputes, calculates return eligibility, and issues refunds under $50 with zero human intervention.</p>
+            <div class="wall-meta">STATUS: LIVE IN PRODUCTION &middot; 4.8/5 CSAT</div>
+          </div>
+
+          <div class="wall-card">
+            <div class="wall-card-badge">SALES AGENT</div>
+            <h4 class="wall-card-title">60-second inbound lead qualification & briefing</h4>
+            <p class="wall-card-desc">Researches prospect headcount and tech stack, qualifies against ICP, and sends a personalized pre-call brief to the AE.</p>
+            <div class="wall-meta">STATUS: LIVE IN PRODUCTION &middot; 2.4X CONVERSION</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         FAQ SECTION
+         ======================================================== -->
+    <section class="section faq-section" id="faq">
+      <div class="container faq-container">
+        <div class="section-badge">
+          <span class="red-sq"></span>
+          <span>FREQUENTLY ASKED QUESTIONS</span>
+        </div>
+        <h2 class="section-title">
+          Clear answers. <span class="text-muted">No vague AI hype.</span>
+        </h2>
+
+        <div class="faq-accordion-list">
+          <details class="faq-item" open>
+            <summary class="faq-question">
+              <span>How do you prevent hallucinations or catastrophic mistakes?</span>
+              <span class="faq-chevron">&plus;</span>
+            </summary>
+            <div class="faq-answer">
+              Every agent we build has deterministic boundary policies and hard human approval gates. For routine actions (like looking up an order status), the agent executes autonomously. For destructive or sensitive actions (issuing a refund over $50, changing vendor bank details, emailing a VIP lead), the agent drafts the action and asks your human operator to approve with one click.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>Where does the agent code run? Do you store our data?</span>
+              <span class="faq-chevron">&plus;</span>
+            </summary>
+            <div class="faq-answer">
+              Agents run entirely within your own cloud environment, API keys, and workspace (AWS, GCP, Supabase, or Railway). We operate under strict mutual NDA and zero data retention. Your sensitive company data never touches our servers and is never used to train any public AI model.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>What happens if an API changes or an underlying LLM updates?</span>
+              <span class="faq-chevron">&plus;</span>
+            </summary>
+            <div class="faq-answer">
+              On the Run plan ($1,500/mo), we provide continuous telemetry, uptime monitoring, and prompt engineering updates whenever third-party APIs update or superior AI models release. If you choose not to subscribe to Run, we hand over 100% of the code, prompt logs, and regression test suites so your internal team can maintain it independently.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>Why a fixed price of $6,000 instead of hourly agency billing?</span>
+              <span class="faq-chevron">&plus;</span>
+            </summary>
+            <div class="faq-answer">
+              Hourly billing creates misaligned incentives where agencies benefit from moving slowly. We build one scoped, proven workflow at a fixed price agreed upfront. You know the exact launch date, the exact success metrics, and the exact ROI before writing a single check.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>Can our internal developers take over the codebase?</span>
+              <span class="faq-chevron">&plus;</span>
+            </summary>
+            <div class="faq-answer">
+              Yes, absolutely. You receive a complete Git repository with clean documentation, unit tests, and integration fixtures. We use clean, modern Python or TypeScript frameworks with zero proprietary lock-in.
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         FINAL CTA BANNER
+         ======================================================== -->
+    <section class="section final-cta-section">
+      <div class="container text-center">
+        <h2 class="final-cta-title">
+          Ready to see if your workflow is worth an agent?
+        </h2>
+        <p class="final-cta-sub">
+          Book a 30-minute fit call. No slides, no sales pressure. Just your workflow and our playbook.
+        </p>
+        <div class="final-cta-actions">
+          <button class="btn-red-pill open-fit-modal-btn">
+            <span>Take the 60-second fit test</span>
+            <span class="arrow">&rarr;</span>
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================
+       FOOTER
+       ======================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-left-col">
+        <div class="footer-logo">
+          <span class="logo-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <rect width="24" height="24" rx="6" fill="#111111" />
+              <circle cx="12" cy="12" r="5" fill="#ea3829" />
+              <circle cx="12" cy="12" r="2.2" fill="#ffffff" />
+            </svg>
+          </span>
+          <span class="footer-brand-name">Leftclickceo</span>
+        </div>
+        <p class="footer-tagline">Custom AI agents that run your operations work.</p>
+        <div class="footer-status-tag">
+          <span class="green-dot"></span>
+          <span>AUTONOMOUS AGENT FLEETS OPERATIONAL</span>
+        </div>
+      </div>
+
+      <div class="footer-links-grid">
+        <div class="footer-col">
+          <span class="footer-heading">NAVIGATION</span>
+          <a href="#hero" class="footer-link">Home</a>
+          <a href="#agents" class="footer-link">Agents Directory</a>
+          <a href="#see-one-work" class="footer-link">Live Simulator</a>
+          <a href="#process" class="footer-link">30-Day Process</a>
+        </div>
+        <div class="footer-col">
+          <span class="footer-heading">COMMERCIAL</span>
+          <a href="#calculator" class="footer-link">ROI Calculator</a>
+          <a href="#pricing" class="footer-link">Pricing & Guarantees</a>
+          <a href="#faq" class="footer-link">Technical FAQ</a>
+          <button class="footer-link-btn open-fit-modal-btn">Book an Audit</button>
+        </div>
+        <div class="footer-col">
+          <span class="footer-heading">GOVERNANCE</span>
+          <span class="footer-meta-item">SOC-2 Type II Prepared</span>
+          <span class="footer-meta-item">Zero Data Retention</span>
+          <span class="footer-meta-item">100% Code Handover</span>
+          <span class="footer-meta-item">&copy; 2026 Leftclickceo Inc.</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================
+       MODAL 1: AGENT SKETCH MODAL
+       ======================================================== -->
+  <div class="modal-backdrop" id="sketch-modal" aria-hidden="true">
+    <div class="sketch-modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-agent-title">
+      <button class="modal-close-btn" id="close-sketch-modal" aria-label="Close Modal">&times;</button>
+
+      <span class="modal-eyebrow">AGENT SKETCH</span>
+      <h3 class="modal-agent-title" id="modal-agent-title">Invoice Processor</h3>
+      <p class="modal-agent-sub" id="modal-agent-sub">For: &ldquo;Match invoices to purchase orders&rdquo;</p>
+
+      <div class="modal-quad-grid">
+        <!-- Box 1: TRIGGER -->
+        <div class="quad-box box-trigger">
+          <span class="quad-label">TRIGGER</span>
+          <p class="quad-text" id="modal-trigger-text">An invoice or payment record comes in.</p>
+        </div>
+
+        <!-- Box 2: HANDS OFF WHEN -->
+        <div class="quad-box box-hands-off">
+          <span class="quad-label">HANDS OFF WHEN</span>
+          <p class="quad-text" id="modal-hands-off-text">Amounts don't match, or the vendor is new.</p>
+        </div>
+
+        <!-- Box 3: WHAT IT DOES (Full Width) -->
+        <div class="quad-box box-what-it-does span-2">
+          <span class="quad-label">WHAT IT DOES</span>
+          <div class="numbered-list" id="modal-steps-list">
+            <div class="num-item"><span class="red-num">01</span><span>Reads every line from the document</span></div>
+            <div class="num-item"><span class="red-num">02</span><span>Matches it to the purchase order or ledger</span></div>
+            <div class="num-item"><span class="red-num">03</span><span>Flags anything that doesn't match</span></div>
+            <div class="num-item"><span class="red-num">04</span><span>Prepares clean items for approval</span></div>
+          </div>
+        </div>
+
+        <!-- Box 4: CONNECTS TO -->
+        <div class="quad-box box-connects">
+          <span class="quad-label">CONNECTS TO</span>
+          <div class="connects-tags" id="modal-connects-tags">
+            <span class="tag-pill">Email</span>
+            <span class="tag-pill">Accounting</span>
+            <span class="tag-pill">Sheets</span>
+          </div>
+        </div>
+
+        <!-- Box 5: WHERE TO START -->
+        <div class="quad-box box-where-start">
+          <span class="quad-label">WHERE TO START</span>
+          <p class="quad-text" id="modal-start-text">A Build, from $6,000 fixed. We confirm scope on a free call.</p>
+        </div>
+      </div>
+
+      <div class="modal-card-footer">
+        <span class="modal-footer-caption">
+          A rough sketch from our playbook, matched on your words. The real plan comes out of the audit.
+        </span>
+        <button class="btn-white-pill open-fit-modal-btn" id="modal-fit-test-btn">
+          Take the 60-second fit test
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       MODAL 2: 60-SECOND FIT TEST / BOOK A CALL MODAL
+       ======================================================== -->
+  <div class="modal-backdrop" id="fit-modal" aria-hidden="true">
+    <div class="fit-modal-container" role="dialog" aria-modal="true">
+      <button class="modal-close-btn" id="close-fit-modal" aria-label="Close">&times;</button>
+
+      <!-- Left Dark Info Pane -->
+      <div class="fit-left-pane">
+        <div class="fit-left-top">
+          <span class="red-micro-tag">FREE FIT CALL</span>
+          <h3 class="fit-left-title">30 minutes.<br />No slides.</h3>
+
+          <div class="fit-check-items">
+            <div class="fit-check-row">
+              <span class="red-check">&check;</span>
+              <span>We look at one workflow together</span>
+            </div>
+            <div class="fit-check-row">
+              <span class="red-check">&check;</span>
+              <span>You hear if an agent would pay back</span>
+            </div>
+            <div class="fit-check-row">
+              <span class="red-check">&check;</span>
+              <span>Reply within one business day</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="fit-left-bottom">
+          You leave with a shortlist of what's worth automating, whether you hire us or not.
+        </div>
+      </div>
+
+      <!-- Right Interactive Step Pane -->
+      <div class="fit-right-pane">
+        <!-- Progress Header -->
+        <div class="fit-progress-bar-row">
+          <span class="fit-progress-label" id="fit-progress-text">25% COMPLETED</span>
+          <div class="fit-progress-track">
+            <div class="fit-progress-fill" id="fit-progress-fill" style="width: 25%;"></div>
+          </div>
+        </div>
+
+        <!-- Step 1: Workflow Selection -->
+        <div class="fit-step-pane active" id="fit-step-1">
+          <h3 class="fit-step-question">What should an agent take off your plate?</h3>
+          <p class="fit-step-sub">Select all that apply.</p>
+
+          <div class="fit-options-grid">
+            <button class="fit-option-btn selected" data-val="lead-followup">
+              <div class="opt-top"><span class="opt-icon">&#x2197;</span><span class="opt-check">&check;</span></div>
+              <span class="opt-title">Lead follow-up</span>
+            </button>
+            <button class="fit-option-btn" data-val="support-tickets">
+              <div class="opt-top"><span class="opt-icon">&#x2709;</span><span class="opt-check">&check;</span></div>
+              <span class="opt-title">Support tickets</span>
+            </button>
+            <button class="fit-option-btn" data-val="invoices">
+              <div class="opt-top"><span class="opt-icon">&#x1F4C4;</span><span class="opt-check">&check;</span></div>
+              <span class="opt-title">Invoices and finance</span>
+            </button>
+            <button class="fit-option-btn" data-val="reporting">
+              <div class="opt-top"><span class="opt-icon">&#x25F7;</span><span class="opt-check">&check;</span></div>
+              <span class="opt-title">Reporting</span>
+            </button>
+            <button class="fit-option-btn" data-val="scheduling">
+              <div class="opt-top"><span class="opt-icon">&#x23F1;</span><span class="opt-check">&check;</span></div>
+              <span class="opt-title">Scheduling</span>
+            </button>
+            <button class="fit-option-btn" data-val="other">
+              <div class="opt-top"><span class="opt-icon">&plus;</span><span class="opt-check">&check;</span></div>
+              <span class="opt-title">Something else</span>
+            </button>
+          </div>
+
+          <div class="fit-step-footer">
+            <div></div>
+            <button class="btn-dark-pill" id="fit-continue-1">Continue</button>
+          </div>
+        </div>
+
+        <!-- Step 2: Hours Spent -->
+        <div class="fit-step-pane" id="fit-step-2">
+          <h3 class="fit-step-question">How many hours does your team spend on this each week?</h3>
+          <p class="fit-step-sub">Across all people involved.</p>
+
+          <div class="fit-list-options">
+            <button class="fit-list-btn" data-val="under-10">Under 10 hours per week</button>
+            <button class="fit-list-btn selected" data-val="10-30">10 to 30 hours per week</button>
+            <button class="fit-list-btn" data-val="30-60">30 to 60 hours per week</button>
+            <button class="fit-list-btn" data-val="60-plus">60+ hours per week (dedicated team)</button>
+          </div>
+
+          <div class="fit-step-footer">
+            <button class="btn-outline-pill-sm" id="fit-back-2">Back</button>
+            <button class="btn-dark-pill" id="fit-continue-2">Continue</button>
+          </div>
+        </div>
+
+        <!-- Step 3: Current Software Stack -->
+        <div class="fit-step-pane" id="fit-step-3">
+          <h3 class="fit-step-question">Which tools does this workflow touch?</h3>
+          <p class="fit-step-sub">Select your primary systems.</p>
+
+          <div class="fit-stack-chips">
+            <button class="stack-chip selected">Email (Gmail / Outlook)</button>
+            <button class="stack-chip selected">Slack / Teams</button>
+            <button class="stack-chip selected">HubSpot / Salesforce</button>
+            <button class="stack-chip">Google Sheets / Excel</button>
+            <button class="stack-chip">Stripe / QuickBooks</button>
+            <button class="stack-chip">Zendesk / Intercom</button>
+            <button class="stack-chip">Postgres / Custom DB</button>
+          </div>
+
+          <div class="fit-step-footer">
+            <button class="btn-outline-pill-sm" id="fit-back-3">Back</button>
+            <button class="btn-dark-pill" id="fit-continue-3">Calculate Fit &rarr;</button>
+          </div>
+        </div>
+
+        <!-- Step 4: Result & Form Submission -->
+        <div class="fit-step-pane" id="fit-step-4">
+          <div class="fit-result-card">
+            <span class="result-badge-red" id="result-badge">PROBABLY NOT YET</span>
+            <h4 class="result-title" id="result-title">An agent may not pay back here.</h4>
+            <p class="result-body" id="result-body">
+              At this volume, or with this much judgment per case, the math is often thin. Book the free call anyway and we'll tell you straight.
+            </p>
+          </div>
+
+          <form id="fit-booking-form" class="fit-form-grid" onsubmit="return false;">
+            <div class="form-row">
+              <div class="form-group flex-1">
+                <label for="fit-email">Work email</label>
+                <input type="email" id="fit-email" required placeholder="name@company.com" />
+              </div>
+              <div class="form-group flex-1">
+                <label for="fit-name">Your name</label>
+                <input type="text" id="fit-name" required placeholder="Alex Turner" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="fit-company">Company <span class="text-muted">(Optional)</span></label>
+              <input type="text" id="fit-company" placeholder="Acme Logistics Inc." />
+            </div>
+
+            <div class="fit-step-footer mt-4">
+              <button type="button" class="btn-outline-pill-sm" id="fit-back-4">Back</button>
+              <button type="submit" class="btn-dark-pill" id="fit-submit-btn">Book my call</button>
+            </div>
+          </form>
+
+          <div class="fit-success-message hidden" id="fit-success-message">
+            <div class="success-icon-wrap">&check;</div>
+            <h4>Call request received!</h4>
+            <p>We've prepared your agent roadmap brief. Look out for a calendar invite within one business day.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
